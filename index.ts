@@ -12,7 +12,7 @@ const greetSomeName = (req: http.IncomingMessage, res: http.ServerResponse, quer
 
 const getInformation = (req: http.IncomingMessage, res: http.ServerResponse): void => {
     const responseData = {
-        time: Date().toString(),
+        time: new Date().toISOString(),
         client_address: req.socket.remoteAddress,
         host_name: hostname(),
         headers: req.headers
